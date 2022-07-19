@@ -10,10 +10,10 @@ fig, ax = plt.subplots()  # "fig" - весь рисунок, на котором
 
 # Создадим красные точки, чтобы было визуально понятнее, где находится квадрат числа.
 # "s" - size, "c" - color (0 - темно, 1 - светло), "edgecolor"- цве контура вокруг точек.
-ax.scatter(numbers, sequence_of_numbers_square, s=200, c=(0.7, 0.9, 0), edgecolor="red")
+ax.scatter(numbers, sequence_of_numbers_square, s=200, c=(0.7, 0.9, 0), edgecolor="red", zorder=2)
 
 # Построение графика на основе входных данных. Первый аргумент - значения на оси ОХ, второй - ОУ:
-ax.plot(numbers, sequence_of_numbers_square, linewidth=5)  # "linewidth" - толщина линии.
+ax.plot(numbers, sequence_of_numbers_square, linewidth=5, zorder=1)  # "linewidth" - толщина линии.
 ax.set_title('Squares of numbers', fontsize=24)  # Установка названия графика + выбор размера шрифта.
 ax.set_xlabel('Values', fontsize=14)  # Установка названия оси ОХ с размером 14.
 ax.set_ylabel('Squares', fontsize=14)  # Установка названия оси OY с размером 14.
